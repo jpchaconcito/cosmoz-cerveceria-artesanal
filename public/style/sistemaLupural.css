@@ -1,0 +1,157 @@
+.inicio {
+    background: #1f002b;
+}
+
+.sistLupular {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    background-color: rgb(3, 0, 6);
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    border-bottom-left-radius: 50% 100px;
+    border-bottom-right-radius: 50% 100px;
+}
+
+.container {
+    font-size: 6px;
+    width: 40em;
+    height: 40em;
+}
+
+.container img {
+    height: 140%;
+    width: 140%;
+}
+
+.lupulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 70%;
+    height: 40em;
+    width: 40em;
+    clip-path: circle(40% at 50% 50%);
+    z-index: 1;
+    animation: rotar 130s ease infinite;
+}
+
+.pred,
+.pblond,
+.pblack,
+.pgreen {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.pblond {
+    top: 65%;
+    left: 15%;
+    width: 4.3em;
+    height: 4.3em;
+    background-image: url('../img/blond.png');
+    background-size: cover;
+    box-shadow: yellow;
+    animation: rotar 10s ease infinite;
+    transition: all 1.5s;
+    cursor: pointer;
+}
+.pblond:hover {
+    width: 8em;
+    height: 8em;
+    animation: levitar 1s ease infinite;
+}
+
+.pred {
+    top: 60%;
+    left: 75%;
+    width: 5.5em;
+    height: 5.5em;
+    background-image: url('../img/rojo.png');
+    background-size: cover;
+    animation: rotar 14s ease infinite;
+    transition: all 1.5s;
+    cursor: pointer;
+}
+.pred:hover {
+    width: 8em;
+    height: 8em;
+    animation: levitar 1s ease infinite;
+}
+
+.pgreen {
+    top: 30%;
+    left: 50%;
+    width: 6.5em;
+    height: 6.5em;
+    background-image: url('../img/gren.png');
+    background-size: cover;
+    animation: rotar 16s ease infinite;
+    transition: all 1.5s;
+    cursor: pointer;
+}
+.pgreen:hover {
+    width: 10em;
+    height: 10em;
+    animation: levitar 1s ease infinite;
+}
+
+.pblack {
+    top: 10%;
+    left: 25%;
+    width: 6.9em;
+    height: 6.9em;
+    background-image: url('../img/black.png');
+    background-size: cover;
+    animation: rotar 20s ease infinite;
+    transition: all 1.5s;
+    cursor: pointer;
+}
+.pblack:hover {
+    width: 10em;
+    height: 10em;
+    animation: levitar 1s ease infinite;
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 100%;
+    z-index: 0;
+} 
+
+@keyframes rotar {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes levitar {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(2px) translateX(2px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75%{
+        transform: translateY(0px) translateX(-2px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+  
+  
+
+

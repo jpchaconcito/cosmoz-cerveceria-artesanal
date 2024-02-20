@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+#recuadro {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    color: white;
+    background-color: rgba(87, 38, 127, 1);
+    box-shadow:
+    0 0 2px rgba(148, 0, 211, 1),
+    0 0 4px rgba(148, 0, 211, 1),
+    0 0 8px rgba(148, 0, 211, 1),
+    0 0 16px rgb(87, 38, 127, 1),
+    0 0 32px rgba(87, 38, 127, 1),
+    0 0 48px rgba(87, 38, 127, 1),
+    0 0 50px rgb(48, 20, 71, 1),
+    0 0 60px rgba(48, 20, 71, 1),
+    0 0 70px rgba(48, 20, 71, 1);
+    border-radius: 10px;
+    text-align: center;
+    z-index: 9999;
+}
+header {
+    background-color: #1f002b;
+    color: #ffffff;
+    padding: 10px;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    position: sticky;
+    z-index: 100;
+    box-shadow:
+    0 0 2px rgba(148, 0, 211, 1),
+    0 0 4px rgba(148, 0, 211, 1),
+    0 0 8px rgba(148, 0, 211, 1),
+    0 0 16px rgb(87, 38, 127, 1),
+    0 0 32px rgba(87, 38, 127, 1),
+    0 0 48px rgba(87, 38, 127, 1),
+    0 0 50px rgb(48, 20, 71, 1),
+    0 0 60px rgba(48, 20, 71, 1),
+    0 0 70px rgba(48, 20, 71, 1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5px;
+    animation: wave 1.5s alternate;
+}
+
+.logo {
+    margin-left: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+li {
+    margin-left: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.svgC {
+    width: 40px;
+    height: 40px;
+}
+
+.svgC:hover {
+    width: 45px;
+    height: 45px;
+}
+
+.svgN {
+    width: 40px;
+    height: 40px;
+}
+
+.svgN:hover {
+    width: 45px;
+    height: 45px;
+}
+
+.svgP {
+    width: 40px;
+    height: 40px;
+}
+
+.svgP:hover {
+    width: 45px;
+    height: 45px;
+}
+
+.svgI {
+    width: 40px;
+    height: 40px;
+}
+
+.svgI:hover {
+    width: 45px;
+    height: 45px;
+}
+
+.opcolor {
+    position: absolute;
+    left: 0;
+    top: 30%;
+    color: white;
+    width: 100px;
+    z-index: 90;
+}
+.opblack,.opblond,.opred,.opgreen{
+    text-align: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    transition: all 1s;
+    cursor: pointer; 
+}
+
+.opblond{
+    background: rgb(93, 32, 5, 1);
+}
+.opblond:hover{
+    box-shadow: 0 0 5px 5px yellow;
+    width: 80px;
+}
+
+.opred{
+    background: rgb(42, 8, 15, 1);
+}
+.opred:hover{
+    box-shadow: 0 0 5px 5px red;
+    width: 80px;
+}
+
+.opgreen{
+    background: rgb(0, 33, 0, 1);
+}
+.opgreen:hover{
+    box-shadow: 0 0 5px 5px green;
+    width: 80px;
+}
+
+.opblack{
+    background: rgb(31, 0, 43, 1);
+}
+.opblack:hover{
+    box-shadow: 0 0 5px 5px purple;
+    width: 80px;
+}
+
+.productos {
+    background: #1f002b;
+    text-align: center;
+    overflow: hidden;
+    border-bottom-left-radius: 50% 20px;
+    border-bottom-right-radius: 50% 20px;
+}
+
+.cards {
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.cardpolas {
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+}
+
+#pola1{
+    display: block;
+    width: 300px;
+    height: auto;
+    margin-bottom: 15px;
+    animation: wave 2s linear infinite;
+}
+
+#pola1:hover {
+    width: 320px;
+}
+#pola2 {
+    display: block;
+    width: 300px;
+    height: auto;
+    margin-bottom: 15px;
+    animation: wave 2s linear infinite;
+}
+#pola2:hover {
+    width: 320px;
+}
+
+.lema {
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+    text-shadow:
+        0 0 2px rgba(148, 0, 211, 1),
+        0 0 4px rgba(148, 0, 211, 1),
+        0 0 6px rgba(148, 0, 211, 1),
+        0 0 12px rgb(87, 38, 127, 1),
+        0 0 18px rgba(87, 38, 127, 1),
+        0 0 24px rgba(87, 38, 127, 1),
+        0 0 30px rgb(48, 20, 71, 1),
+        0 0 40px rgba(48, 20, 71, 1),
+        0 0 50px rgba(48, 20, 71, 1);
+}
+
+.lema {
+    display: inline-block;
+    animation: wave 1s infinite;
+}
+
+@keyframes wave {
+
+    0%,
+    50%,
+    100% {
+        transform: translateY(0);
+    }
+
+    25%,
+    75% {
+        transform: translateY(-2px) translateX(1px);
+    }
+}
+
+:root {
+    --card-width: 30%;
+    --card-height: 80%;
+    --photo-container-size: 200px;
+    --border-radius: 10px;
+}
+
+.equipo {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow:
+        0 0 2px rgba(148, 0, 211, 1),
+        0 0 4px rgba(148, 0, 211, 1),
+        0 0 8px rgba(148, 0, 211, 1),
+        0 0 16px rgb(87, 38, 127, 1),
+        0 0 32px rgba(87, 38, 127, 1),
+        0 0 48px rgba(87, 38, 127, 1),
+        0 0 50px rgb(48, 20, 71, 1),
+        0 0 60px rgba(48, 20, 71, 1),
+        0 0 70px rgba(48, 20, 71, 1);
+}
+
+.presentacion {
+    text-align: center;
+    background: #ffffff;
+    padding: 40px;
+}
+
+.employee-cards-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.employee-card {
+    width: var(--card-width);
+    height: var(--card-height);
+    width: 280px;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    background-color: #e7e7e7;
+    box-shadow: 0 0 20px 3px rgba(87, 38, 127, 1);
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+}
+
+.employee-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.employee-text {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.employee-photo {
+    width: var(--photo-container-size);
+    height: var(--photo-container-size);
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.employee-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.employee-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.employee-profession {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.employee-description {
+    font-size: 1em;
+    color: #333;
+}
