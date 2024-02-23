@@ -43,151 +43,90 @@ const producto = document.getElementById('Productos');
 const img1 = document.getElementById('pola1');
 const img2 = document.getElementById('pola2');
 
-const cRed = ["rgb(42, 8, 15)", "0 0 2px rgba(223, 4, 4, 1), 0 0 4px rgba(223, 4, 4, 1), 0 0 8px rgba(223, 4, 4, 1), 0 0 16px rgba(131, 7, 7, 1), 0 0 32px rgba(131, 7, 7, 1), 0 0 48px rgba(131, 7, 7, 1), 0 0 50px rgba(42, 8, 15, 1), 0 0 60px rgba(42, 8, 15, 1), 0 0 70px rgba(42, 8, 15, 1)"];
-const cBlond = ["rgb(93, 32, 5)", "0 0 2px rgba(255, 217, 0, 1), 0 0 4px rgba(255, 217, 0, 1), 0 0 8px rgba(255, 217, 0, 1), 0 0 16px rgba(161, 89, 7, 1), 0 0 32px rgba(161, 89, 7, 1), 0 0 48px rgba(161, 89, 7, 1), 0 0 50px rgba(93, 32, 5, 1), 0 0 60px rgba(93, 32, 5, 1), 0 0 70px rgba(93, 32, 5, 1)"];
-const cBlack = ["rgb(31, 0, 43)", "0 0 2px rgba(148, 0, 211, 1), 0 0 4px rgba(148, 0, 211, 1), 0 0 8px rgba(148, 0, 211, 1), 0 0 16px rgba(87, 38, 127, 1), 0 0 32px rgba(87, 38, 127, 1), 0 0 48px rgba(87, 38, 127, 1), 0 0 50px rgba(48, 20, 71, 1), 0 0 60px rgba(48, 20, 71, 1), 0 0 70px rgba(48, 20, 71, 1)"];
+const cRed = ["rgb(42, 8, 15)", "0 0 2px rgba(223, 4, 4, 1), 0 0 4px rgba(223, 4, 4, 1), 0 0 8px rgba(223, 4, 4, 1), 0 0 16px rgba(131, 7, 7, 1), 0 0 32px rgba(131, 7, 7, 1), 0 0 48px rgba(131, 7, 7, 1), 0 0 50px rgba(42, 8, 15, 1), 0 0 60px rgba(42, 8, 15, 1), 0 0 70px rgba(42, 8, 15, 1)", '0 0 8px 0 red', 'public/img/ETIQUETA ROJA.png', 'public/img/ETIQUETA ROJA OSCURA.png'];
+const cBlond = ["rgb(93, 32, 5)", "0 0 2px rgba(255, 217, 0, 1), 0 0 4px rgba(255, 217, 0, 1), 0 0 8px rgba(255, 217, 0, 1), 0 0 16px rgba(161, 89, 7, 1), 0 0 32px rgba(161, 89, 7, 1), 0 0 48px rgba(161, 89, 7, 1), 0 0 50px rgba(93, 32, 5, 1), 0 0 60px rgba(93, 32, 5, 1), 0 0 70px rgba(93, 32, 5, 1)", '0 0 8px 0 yellow', 'public/img/ETIQUETA DORADA.png', 'public/img/ETIQUETA DORADA NEGRA.png'];
+const cBlack = ["rgb(31, 0, 43)", "0 0 2px rgba(148, 0, 211, 1), 0 0 4px rgba(148, 0, 211, 1), 0 0 8px rgba(148, 0, 211, 1), 0 0 16px rgba(87, 38, 127, 1), 0 0 32px rgba(87, 38, 127, 1), 0 0 48px rgba(87, 38, 127, 1), 0 0 50px rgba(48, 20, 71, 1), 0 0 60px rgba(48, 20, 71, 1), 0 0 70px rgba(48, 20, 71, 1)", '0 0 8px 0 purple', 'public/img/ETIQUETA NEGRA.png', 'public/img/ETIQUETA NEGRA.png'];
 
 
-document.getElementById('pRed').addEventListener('click', colorRed);
-document.getElementById('opRed').addEventListener('click', colorRed);
+document.getElementById('pRed').addEventListener('click', function () {
+    cambioColor(cRed);
+});
+document.getElementById('opRed').addEventListener('click', function () {
+    cambioColor(cRed);
+});
 
-document.getElementById('pBlond').addEventListener('click', colorBlond);
-document.getElementById('opBlond').addEventListener('click', colorBlond);
+document.getElementById('pBlond').addEventListener('click', function () {
+    cambioColor(cBlond);
+});
+document.getElementById('opBlond').addEventListener('click', function () {
+    cambioColor(cBlond);
+});
 
-document.getElementById('pBlack').addEventListener('click', colorBlack);
-document.getElementById('opBlack').addEventListener('click', colorBlack);
+document.getElementById('pGreen').addEventListener('click', function () {
+    cambioColor(cGreen);
+});
+document.getElementById('opGreen').addEventListener('click', function () {
+    cambioColor(cGreen);
+});
 
-document.getElementById('pGreen').addEventListener('click', colorGreen);
-document.getElementById('opGreen').addEventListener('click', colorGreen);
+document.getElementById('pBlack').addEventListener('click', function () {
+    cambioColor(cBlack);
+});
+document.getElementById('opBlack').addEventListener('click', function () {
+    cambioColor(cBlack);
+});
 
-function colorRed() {
-    navbar.style.background = cRed[0];
-    navbar.style.boxShadow = cRed[1];
-    inicio.style.background = cRed[0];
-    footer.style.background = cRed[0];
-    footer.style.boxShadow = cRed[1];
-    producto.style.background = cRed[0];
-    lema.style.textShadow = cRed[1];
-    equipo.style.textShadow = cRed[1];
+function cambioColor(vector) {
+    navbar.style.background = vector[0];
+    navbar.style.boxShadow = vector[1];
+    inicio.style.background = vector[0];
+    footer.style.background = vector[0];
+    footer.style.boxShadow = vector[1];
+    producto.style.background = vector[0];
+    lema.style.textShadow = vector[1];
+    equipo.style.textShadow = vector[1];
     for (let i = 0; i < cards.length; i++) {
-        cards[i].style.boxShadow = cRed[1];
+        cards[i].style.boxShadow = vector[1];
     }
     for (let i = 0; i < ecards.length; i++) {
-        ecards[i].style.boxShadow = "0 0 16px 2px rgba(131, 7, 7, 1)";
+        ecards[i].style.boxShadow = vector[2];
     }
-
-    img1.src = 'public/img/ETIQUETA ROJA.png'
-    img2.src = 'public/img/ETIQUETA ROJA OSCURA.png';
+    img1.src = vector[3];
+    img2.src = vector[4];
 }
 
-function colorBlond () {
-    navbar.style.background = cBlond[0];
-    navbar.style.boxShadow = cBlond[1];
-    inicio.style.background = cBlond[0];
-    footer.style.background = cBlond[0];
-    footer.style.boxShadow = cBlond[1];
-    producto.style.background = cBlond[0];
-    lema.style.textShadow = cBlond[1];
-    equipo.style.textShadow = cBlond[1];
-    for (let i = 0; i < cards.length; i++) {
-        cards[i].style.boxShadow = cBlond[1];
-    }
-    for (let i = 0; i < ecards.length; i++) {
-        ecards[i].style.boxShadow = " 0 0 16px 2px rgba(161, 89, 7, 1)";
-    }
-    
-    img1.src = 'public/img/ETIQUETA DORADA NEGRA.png';
-    img2.src = 'public/img/ETIQUETA DORADA.png';
+const opred = document.getElementById('opRed');
+addHoverEffect(opred, 'Red');
+
+const opblond = document.getElementById('opBlond');
+addHoverEffect(opblond, 'Blond');
+
+const opgreen = document.getElementById('opGreen');
+addHoverEffect(opgreen, 'Green');
+
+const opblack = document.getElementById('opBlack');
+addHoverEffect(opblack, 'Black');
+
+function addHoverEffect(element, newText) {
+    const originalText = element.innerHTML;
+
+    element.addEventListener('mouseover', function () {
+        element.style.transition = 'all 0.5s ease';
+        element.innerHTML = newText;
+        element.style.width = '80px';
+        element.style.borderTopRightRadius = '50% 50px';
+        element.style.borderBottomRightRadius = '50% 50px';
+    });
+
+    element.addEventListener('mouseout', function () {
+        element.innerHTML = originalText;
+        element.style.width = '30px';
+        element.style.borderTopRightRadius = '50%';
+        element.style.borderBottomRightRadius = '50%';
+    });
 }
 
-function colorGreen() {
-}
-
-function colorBlack () {
-    navbar.style.background = cBlack[0];
-    navbar.style.boxShadow = cBlack[1];
-    inicio.style.background = cBlack[0];
-    footer.style.background = cBlack[0];
-    footer.style.boxShadow = cBlack[1];
-    producto.style.background = cBlack[0];
-    lema.style.textShadow = cBlack[1];
-    equipo.style.textShadow = cBlack[1];
-    for (let i = 0; i < cards.length; i++) {
-        cards[i].style.boxShadow = cBlack[1];
-    }
-    for (let i = 0; i < ecards.length; i++) {
-        ecards[i].style.boxShadow = "0 0 16px 2px rgba(87, 38, 127, 1)";
-    }
-    img1.src = 'public/img/ETIQUETA NEGRA.png';
-    img2.src = 'public/img/ETIQUETA NEGRA.png';
-}
-
-const elemento = document.getElementById('opRed');
-const textoOriginal = elemento.innerHTML;
-
-elemento.addEventListener('mouseover', function() {
-    elemento.innerHTML = 'Red';
-    elemento.style.width = '80px';
-    elemento.style.borderTopRightRadius = '50% 50px';
-    elemento.style.borderBottomRightRadius = '50% 50px';
-
-});
-elemento.addEventListener('mouseout', function() {
-    elemento.innerHTML = textoOriginal;
-    elemento.style.width = '30px';
-    elemento.style.borderTopRightRadius = '50%';
-    elemento.style.borderBottomRightRadius = '50%';
-});
-
-const elemento2 = document.getElementById('opBlond');
-const textoOriginal2 = elemento2.innerHTML;
-
-elemento2.addEventListener('mouseover', function() {
-    elemento2.innerHTML = 'Blond';
-    elemento2.style.width = '80px';
-    elemento2.style.borderTopRightRadius = '50% 50px';
-    elemento2.style.borderBottomRightRadius = '50% 50px';
-});
-elemento2.addEventListener('mouseout', function() {
-    elemento2.innerHTML = textoOriginal2;
-    elemento2.style.width = '30px';
-    elemento2.style.borderTopRightRadius = '50%';
-    elemento2.style.borderBottomRightRadius = '50%';
-});
-
-const elemento3 = document.getElementById('opGreen');
-const textoOriginal3 = elemento3.innerHTML;
-
-elemento3.addEventListener('mouseover', function() {
-    elemento3.innerHTML = 'Green';
-    elemento3.style.width = '80px';
-    elemento3.style.borderTopRightRadius = '50% 50px';
-    elemento3.style.borderBottomRightRadius = '50% 50px';
-});
-elemento3.addEventListener('mouseout', function() {
-    elemento3.innerHTML = textoOriginal3;
-    elemento3.style.width = '30px';
-    elemento3.style.borderTopRightRadius = '50%';
-    elemento3.style.borderBottomRightRadius = '50%';
-});
-
-const elemento4 = document.getElementById('opBlack');
-const textoOriginal4 = elemento4.innerHTML;
-
-elemento4.addEventListener('mouseover', function() {
-    elemento4.innerHTML = 'Black';
-    elemento4.style.width = '80px';
-    elemento4.style.borderTopRightRadius = '50% 50px';
-    elemento4.style.borderBottomRightRadius = '50% 50px';
-});
-elemento4.addEventListener('mouseout', function() {
-    elemento4.innerHTML = textoOriginal4;
-    elemento4.style.width = '30px';
-    elemento4.style.borderTopRightRadius = '50%';
-    elemento4.style.borderBottomRightRadius = '50%';
-});
-
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const recuadro = document.createElement('div');
     recuadro.id = 'recuadro';
     recuadro.innerHTML = 'Interactua con los planetas';
@@ -195,7 +134,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     recuadro.style.display = 'block';
 
-    document.addEventListener('click', function() {
+    document.addEventListener('click', function () {
         recuadro.style.display = 'none';
     });
 });
+
+
+
+
+

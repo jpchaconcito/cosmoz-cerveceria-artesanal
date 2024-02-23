@@ -26,6 +26,9 @@ footer {
     display: flex;
     align-items: center;
     padding: 10px;
+    text-decoration: none;
+    color: white;
+    margin-left: 5px;
 }
 
 .redes-sociales a {
